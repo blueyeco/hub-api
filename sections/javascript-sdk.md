@@ -100,7 +100,7 @@ Retrieve your application’s ABS and Facebook analytics.
 <td>Decimal</td>
 </tr>
 <tr>
-<td>num_actions<td>
+<td>num_actions</td>
 <td>Total actions published from app</td>
 <td>Integer</td>
 </tr>
@@ -142,6 +142,7 @@ Retrieve your application’s ABS and Facebook analytics.
 <td>Contains all custom action stats for object</td>
 <td>JSON Object</td>
 </tr>
+</table>
 
 #### Facebook Insights
 Please visit the following link for a list of all stats available through the Facebook Insights API:

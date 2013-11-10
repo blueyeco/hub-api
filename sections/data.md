@@ -98,6 +98,61 @@ At some point you'll want to record that a user made a final selection. This cou
 	);
 ```
 
+To return items selected using the above API call, make a call to 'blhSelectedItems' with the top level data set ID and user's ID
 
 
+```javascript
+	ABS.api('blhSelectedItems', { id:61, user_id:fbId }, function(res) {
+		if(res.data.length > 0) {
+			//NOTE: this returns JSON data, not jQuery objects!
+		}
+	});
+```
 
+### UGC
+
+The Loyalty Hub also provide supports for the myriad of applications that can be created around the concept of User Generated Content. Examples include anything ranging from a contest to a simple contact form. Through our API, users can create their own data items using the same flexible data structure we've built for application managed data. None of the fields below are required, and custom properties are also allowed.
+
+
+<table>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>user_id</td>
+<td>App user ID if exists</td>
+<td>String</td>
+</tr>
+<tr>
+<td>fb_id</td>
+<td>FB user ID if exists</td>
+<td>String</td>
+</tr>
+<tr>
+<td>short_text</td>
+<td>Text with a maximum of 200 characters</td>
+<td>String</td>
+</tr>
+<tr>
+<td>long_text</td>
+<td>Text with maximum 500 characters</td>
+<td>String</td>
+</tr>
+<tr>
+<td>media_url</td>
+<td>Image or video URL</td>
+<td>String</td>
+</tr>
+<tr>
+<td>image</td>
+<td>Id of html file input field. This allows you to upload an image directly, rather than using the media_url field.</td>
+<td>String</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Any custom data in JSON format</td>
+<td>JSON</td>
+</tr>
+</table>

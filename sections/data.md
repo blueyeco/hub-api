@@ -1,3 +1,3 @@
-# The Blueye Hub API Documentation
+# Data API
 
-The Blueye Loyalty Hub API is a complete suite of tools designed to help you reach your community wherever they are. Through our API, third-party applications can take advantage of our implementation of several social features, while leveraging our robust data collection and reporting infrastructure.
+The Loyalty Hub Data API can be utilized for a wide variety of applications. The flexibility of the data architecture provides support for many different data schemas, while storing the data in a unified manner that allows for sharing of data between applications. Built-in analytics allows developers to concentrate on core application implementation while auto-tracking the relevant user actions needed to power the Loyalty Hub Conversion Engine and Customer Insights.

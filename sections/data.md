@@ -32,9 +32,9 @@ Many of the applications you'll create require the user to walk through a step b
 
 <table>
     <tr>
-        <td>Field</td>
-        <td>Description</td>
-        <td>Type</td>
+        <th>Field</th>
+        <th>Description</th>
+        <th>Type</th>
     </tr>
     <tr>
       <td>parent_id</td>
@@ -156,3 +156,58 @@ The Loyalty Hub also provide supports for the myriad of applications that can be
 <td>JSON</td>
 </tr>
 </table>
+
+```javascript
+	var data = { name:"John Doe", email:"john@gmail.com", media_url:"http://test.com/me.png" };
+	
+	ABS.api('blhUGC', { fb_id:'3107076', 'short_txt':'My contest entry', data:data }, function(res) {
+		//returns JSON response, i.e. { success:1, ugc_id:23 }
+	});
+```
+
+### Retrieving UGC
+
+UGC can be retrieved by user_id, fb_id, or for the entire app. You must specify the individual fields you want retrieved. Please the example below for more details.
+
+<table>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>start</td>
+td>The first index to return in the response data array. This is useful when paging through data. (optional)</td>
+<td>Integer</td>
+<tr>
+<td>limit</td>
+<td>How many records to return. The default number is 50. (optional)</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>fields</td>
+<td>a comma delimited list of fields to return. These are the same field names set when pushing the UGC data.</td>
+<td>String</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>User ID specified when UGC was created (optional)</td>
+<td>String</td>
+</tr>
+<tr>
+<td>fb_id</td>
+<td>Facebook ID specified when UGC was created (optional)</td>
+<td>String</td>
+</tr>
+</table>
+
+```javascript
+	ABS.api('getUGC', { limit:12, fields:'user_id,fb_id,media_url,short_txt' }, 
+		function(res) {
+			//returns JSON response, i.e. { success:1, data:[] }
+		}
+	);
+```
+
+
+

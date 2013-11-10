@@ -13,3 +13,91 @@ Each group of similar items is considered a "data set". Related data sets can be
 ### Retrieving Data
 
 Once data has been imported it can be retrieved in your application by invoking the 'blhSet' method of the Loyalty Hub API and passing in the unique data set ID.
+
+```javascript
+	ABS.api('blhSet', { id:61 }, function(response) {
+		$.each(response.data, function(i, item) {
+			$('.my_container').append(item);
+		});
+	});
+```
+
+You'll notice that we immediately appended the returned item to our HTML container. This is because the API returns an array of HTML jQuery Div objects, not typical JSON. This approach allows us to embed the appropriate event handlers directly into your data objects needed to handle auto click-tracking as well as live editing. So basically, you as a developer don't need to worry about item level analytics, and as an added bonus, a CMS is automatically built into your app!
+
+In most cases, you'll probably need to manipulate the properties an/or style of each item. Since the items returned are jQuery objects, you can manipulate them as you please via the standard jQuery functions (i.e. you could simply call item.addClass or item.css to add you own app specific styling). The actual item properties (those defined when uploading the data) can be retrieved using the jQuery data method. For instance, to access the item 'title' property, call item.data('title').
+
+### Data Set Children
+
+Many of the applications you'll create require the user to walk through a step by step experience / commerce builder, each time accessing a new data set in the hierarchy. Provided you've taken the time to properly organize you data hierarchy, presenting the new leg of data to the user is as simple as calling the same 'blhSet' method, but this time passing in the prior steps data set ID as the parent ID. Typically, the next data set will not only be a child of the prior one, but more specifically, a child of a specific item (that which was clicked by the user in the previous step). In this case, also pass in the the parent item ID.
+
+<table>
+    <tr>
+        <td>Field</td>
+        <td>Description</td>
+        <td>Type</td>
+    </tr>
+    <tr>
+      <td>parent_id</td>
+      <td>Parent data set ID</td>
+      <td>Integer</td>
+    </tr>
+    <tr>
+      <td>parent_item</td>
+      <td>Parent item ID in parent data set</td>
+      <td>Integer</td>
+    </tr>
+    <tr>
+      <td>force_items</td>
+      <td>Force items (rather than data set header info) to be returned in cases where there are multiple child data sets (defaults to 0)</td>
+      <td>Boolean</td>
+    </tr>
+</table>
+
+```javascript
+	ABS.api('blhSet', { parent_id:61, parent_item:1307, force_items:1 }, 
+		function(response) {
+			$.each(response.data, function(i, item) {
+				$('.my_container').append(item);
+			});
+		}
+	);
+```
+
+### User Item Selections
+
+At some point you'll want to record that a user made a final selection. This could occur in a commerce builder, poll, or even contest.
+
+<table>
+  <tr>
+    <th>Field</th>
+    <th>Description</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>Top level data set ID</td>
+    <td>Integer</td>
+  </tr>
+  <tr>
+    <td>item_data</td>
+    <td>Any custom data you wish to store with this item selections</td>
+    <td>JSON</td>
+  </tr>
+  <tr>
+    <td>clear</td>
+    <td>Whether or not to clear the user's previous selections (defaults to 0)</td>
+    <td>Boolean</td>
+  </tr>
+</table>
+
+```javascript
+	ABS.api('blhSelectItem', { id:61, item_data:{ 'friends':[34, 12, 45] }, user_id:fbId, clear:1 }, 
+		function(res) {
+			//returns JSON response, i.e. { success:1 }
+		}
+	);
+```
+
+
+
+

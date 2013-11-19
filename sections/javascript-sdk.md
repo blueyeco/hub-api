@@ -1,6 +1,6 @@
 # Web SDK for Javascript
 
-The Javascript SDK provides a set of client-side calls for integrating a custom external application into the ABS Platform.
+The Javascript SDK provides a set of client-side calls for integrating a custom external application into the Hub Platform.
 
 
 ### Initializing the SDK
@@ -9,7 +9,7 @@ To initialize the SDK, include the following Javascript file into your web appli
 
 http://hub.blueye.com/js/api.js
 
-The SDK inserts a div element with the ID abs-root, containing an iframe with the ID abs-frame, into your web application’s source. The ABS object included in the SDK provides access to the various API requests describe in the section below.
+The SDK inserts a div element with the ID hub-root, containing an iframe with the ID hub-frame, into your web application’s source. The HUB object included in the SDK provides access to the various API requests describe in the section below.
 
 ### Authentication
 
@@ -17,7 +17,7 @@ Please contact your account manager to obtain an authorization key required to i
 
 
 ```javascript
-			ABS.init({
+			HUB.init({
 				apiKey: '1a1e31b4d4a3b5191ca22a6919ade490'
 			}, function(response) {
 				if(response.success) {
@@ -31,10 +31,10 @@ Please contact your account manager to obtain an authorization key required to i
 
 ### Facebook Connect
 
-Provides access to the ABS Platform’s implementation of various Facebook API requests.
+Provides access to the Hub Platform’s implementation of various Facebook API requests.
 
 ```javascript
-			ABS.api(‘initFacebook’,  { 
+			HUB.api(‘initFacebook’,  { 
 				appId: ‘YOUR_FACEBOOK_APP_ID’ 
 				}, function(response) { 
 				//handle response 
@@ -46,14 +46,14 @@ Provides access to the ABS Platform’s implementation of various Facebook API r
 Register an Open Graph action to be used with your custom application.
 
 ```javascript
-			ABS.api(‘registerAction’,  { 
+			HUB.api(‘registerAction’,  { 
 				appId: ‘FACEBOOK_APP_ID’,
 				fb_namespace:  ‘FACEBOOK_APP_NAMESPACE’,
 				fb_action: ‘FACEBOOK_ACTION_NAME,
 				fb_object: ‘FACEBOOK_ACTION_OBJECT’,
 				label:  ‘ALIAS_FOR_ACTION’ /* i.e. hiked a trail */  
 			}, function(response) { 
-				//JSON response containing ABS action type ID
+				//JSON response containing HUB action type ID
 				//i.e. { success:1, id:45 }
 			});
 ```
@@ -63,24 +63,24 @@ Register an Open Graph action to be used with your custom application.
 Publish an open graph action triggered from you custom application.
 
 ```javascript
-			ABS.api(‘publishAction’,  { 
+			HUB.api(‘publishAction’,  { 
 				fb_action_type_id: ‘FACEBOOK_ACTION_TYPE_ID’,
 				object_id:  ‘UNIQUE_OBJECT_ID_IN_CUSTOM_APP’,
 				object_name:  ‘UNIQUE_OBJECT_NAME_IN_CUSTOM_APP’,
 				object_descr:  ‘OBJECT_DESCRIPTION,
 				object_url:  ‘DIRECT_OBJECT_URL’
 			}, function(response) {
-				//JSON response containing ABS action ID
+				//JSON response containing HUB action ID
 				//i.e. { success:1, id:1298 }
 			});
 ```
 
 ### Get Custom App Analytics
 
-Retrieve your application’s ABS and Facebook analytics.
+Retrieve your application’s Hub and Facebook analytics.
 
 ```javascript
-			ABS.api(‘getAnalytics’, function(response) {
+			HUB.api(‘getAnalytics’, function(response) {
 				//JSON response containing header level data, array of object level data, 
 				//and Facebook Insights data
 			});
@@ -166,7 +166,7 @@ Each group of similar items is considered a "data set". Related data sets can be
 Once data has been imported it can be retrieved in your application by invoking the 'dataSet' method of the Hub API and passing in the unique data set ID.
 
 ```javascript
-	ABS.api('dataSet', { id:61 }, function(response) {
+	HUB.api('dataSet', { id:61 }, function(response) {
 		$.each(response.data, function(i, item) {
 			$('.my_container').append(item);
 		});
@@ -205,7 +205,7 @@ Many of the applications you'll create require the user to walk through a step b
 </table>
 
 ```javascript
-	ABS.api('dataSet', { parent_id:61, parent_item:1307, force_items:1 }, 
+	HUB.api('dataSet', { parent_id:61, parent_item:1307, force_items:1 }, 
 		function(response) {
 			$.each(response.data, function(i, item) {
 				$('.my_container').append(item);
@@ -242,7 +242,7 @@ At some point you'll want to record that a user made a final selection. This cou
 </table>
 
 ```javascript
-	ABS.api('selectItem', { id:61, item_data:{ 'friends':[34, 12, 45] }, user_id:fbId, clear:1 }, 
+	HUB.api('selectItem', { id:61, item_data:{ 'friends':[34, 12, 45] }, user_id:fbId, clear:1 }, 
 		function(res) {
 			//returns JSON response, i.e. { success:1 }
 		}
@@ -253,7 +253,7 @@ To return items selected using the above API call, make a call to 'selectedItems
 
 
 ```javascript
-	ABS.api('selectedItems', { id:61, user_id:fbId }, function(res) {
+	HUB.api('selectedItems', { id:61, user_id:fbId }, function(res) {
 		if(res.data.length > 0) {
 			//NOTE: this returns JSON data, not jQuery objects!
 		}
@@ -311,7 +311,7 @@ The Hub also provide supports for the myriad of applications that can be created
 ```javascript
 	var data = { name:"John Doe", email:"john@gmail.com", media_url:"http://test.com/me.png" };
 	
-	ABS.api('ugc', { fb_id:'3107076', 'short_txt':'My contest entry', data:data }, function(res) {
+	HUB.api('ugc', { fb_id:'3107076', 'short_txt':'My contest entry', data:data }, function(res) {
 		//returns JSON response, i.e. { success:1, ugc_id:23 }
 	});
 ```
@@ -353,7 +353,7 @@ td>The first index to return in the response data array. This is useful when pag
 </table>
 
 ```javascript
-	ABS.api('getUGC', { limit:12, fields:'user_id,fb_id,media_url,short_txt' }, 
+	HUB.api('getUGC', { limit:12, fields:'user_id,fb_id,media_url,short_txt' }, 
 		function(res) {
 			//returns JSON response, i.e. { success:1, data:[] }
 		}

@@ -77,9 +77,8 @@ Publish an open graph action triggered from you custom application.
 
 ### App Level Analytics
 
-Track any custom event you want and retrieve the data
+Track any custom item or user event in your app.
 
-### Analytics Object Level Fields
 <table>
 <tr>
 <th>Field</th>
@@ -87,36 +86,43 @@ Track any custom event you want and retrieve the data
 <th>Type</th>
 </tr>
 <tr>
-<td>avg_time_spent</td>
-<td>Average time spent in object</td>
-<td>Decimal</td>
+<td>category</td>
+<td>Category of item (i.e. Wines)</td>
+<td>String</td>
 </tr>
 <tr>
-<td>num_views</td>
-<td>Total views of objects</td>
-<td>Integer</td>
+<td>action</td>
+<td>Action taken on item (i.e. followed)</td>
+<td>String</td>
 </tr>
 <tr>
-<td>num_clicks</td>
-<td>Total clicks of links / buttons within object</td>
-<td>Integer</td>
+<td>user_id</td>
+<td>Unique user ID in your system (optional only if FB ID below is specified) </td>
+<td>String</td>
 </tr>
 <tr>
-<td>num_shares</td>
-<td>Total shares / likes of object</td>
-<td>Integer</td>
+<td>fb_id</td>
+<td>User's Facebook ID if applicable (optional)</td>
+<td>String</td>
 </tr>
 <tr>
-<td>actions</td>
-<td>Contains all custom action stats for object</td>
-<td>JSON Object</td>
+<td>title</td>
+<td>A name or brief description for the item or event (optional) </td>
+<td>String</td>
+</tr>
+<tr>
+<td>img</td>
+<td>Imae URL for item or event (optional) </td>
+<td>String</td>
 </tr>
 </table>
 
 ```javascript
-			HUB.api(‘trackItem’, { fb_id:3107076, category:'contest', action:'entry', img_url:'http://www.blueye.com/myimg.png', title:'My Entry!' }, function(response) {
-				//JSON response { success:1 }
-			});
+			HUB.api(‘trackItem’, { fb_id:3107076, category:'contest', action:'entry', img_url:'http://www.blueye.com/myimg.png', title:'My Entry!' }, 
+				function(response) {
+					//JSON response { success:1 }
+				}
+			);
 ```
 
 #### Facebook Insights

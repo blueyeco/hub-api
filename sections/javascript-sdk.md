@@ -13,7 +13,7 @@ The SDK inserts a div element with the ID abs-root, containing an iframe with th
 
 ### Authentication
 
-Please contact your account manager to obtain an authorization key required to initialize the API.
+Please contact your account manager to obtain an authorization key required to initialize the SDK.
 
 
 ```javascript

@@ -87,12 +87,12 @@ Track any custom item or user event in your app.
 </tr>
 <tr>
 <td>category</td>
-<td>Category of item (i.e. Wines)</td>
+<td>Category of item (i.e. Wines) or type of event</td>
 <td>String</td>
 </tr>
 <tr>
 <td>action</td>
-<td>Action taken on item (i.e. followed)</td>
+<td>Action taken an item or event (i.e. followed)</td>
 <td>String</td>
 </tr>
 <tr>
@@ -111,14 +111,15 @@ Track any custom item or user event in your app.
 <td>String</td>
 </tr>
 <tr>
-<td>img</td>
-<td>Imae URL for item or event (optional) </td>
+<td>img_url</td>
+<td>Image URL for item or event (optional) </td>
 <td>String</td>
 </tr>
 </table>
 
 ```javascript
-			HUB.api(‘trackItem’, { fb_id:3107076, category:'contest', action:'entry', img_url:'http://www.blueye.com/myimg.png', title:'My Entry!' }, 
+			HUB.api(‘trackItem’, { fb_id:3107076, category:'contest', action:'entry', 
+						img_url:'http://www.blueye.com/myimg.png', title:'My Entry!' }, 
 				function(response) {
 					//JSON response { success:1 }
 				}

@@ -318,7 +318,7 @@ The Hub also provide supports for the myriad of applications that can be created
 
 ### Retrieving UGC
 
-UGC can be retrieved by user_id, fb_id, or for the entire app. You must specify the individual fields you want retrieved. Please the example below for more details.
+UGC can be retrieved by user_id, fb_id, or for the entire app. You must specify the individual fields you want retrieved. Please see the example below for more details.
 
 <table>
 <tr>
@@ -328,7 +328,7 @@ UGC can be retrieved by user_id, fb_id, or for the entire app. You must specify 
 </tr>
 <tr>
 <td>start</td>
-td>The first index to return in the response data array. This is useful when paging through data. (optional)</td>
+<td>The first index to return in the response data array. This is useful when paging through data. (optional)</td>
 <td>Integer</td>
 <tr>
 <td>limit</td>

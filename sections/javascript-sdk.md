@@ -5,7 +5,7 @@ The Javascript SDK provides a set of client-side calls for integrating a custom 
 
 ### Initializing the SDK
 
-To initialize the API, include the Javascript SDK into your web application
+To initialize the SDK, include the following Javascript file into your web application
 
 http://hub.blueye.com/js/api.js
 
@@ -21,7 +21,7 @@ Please contact your account manager to obtain an authorization key required to i
 				apiKey: '1a1e31b4d4a3b5191ca22a6919ade490'
 			}, function(response) {
 				if(response.success) {
-					alert(‘Successfully initialized the API’);
+					alert(‘Successfully initialized the SDK’);
 				}
 				else {
 					alert(response.message);

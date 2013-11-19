@@ -75,41 +75,10 @@ Publish an open graph action triggered from you custom application.
 			});
 ```
 
-### Get Custom App Analytics
+### App Level Analytics
 
-Retrieve your application’s Hub and Facebook analytics.
+Track any custom event you want and retrieve the data
 
-```javascript
-			HUB.api(‘getAnalytics’, function(response) {
-				//JSON response containing header level data, array of object level data, 
-				//and Facebook Insights data
-			});
-```
-
-
-### Analytics Header Fields
-<table>
-<tr>
-<th>Field</th>
-<th>Description</th>
-<th>Type</th>
-</tr>
-<tr>
-<td>avg_time_spent</td>
-<td>Average time spent in app</td>
-<td>Decimal</td>
-</tr>
-<tr>
-<td>num_actions</td>
-<td>Total actions published from app</td>
-<td>Integer</td>
-</tr>
-<tr>
-<td>num_views</td>
-<td>Total times app has been loaded</td>
-<td>Integer</td>
-</tr>
-</table>
 ### Analytics Object Level Fields
 <table>
 <tr>
@@ -143,6 +112,12 @@ Retrieve your application’s Hub and Facebook analytics.
 <td>JSON Object</td>
 </tr>
 </table>
+
+```javascript
+			HUB.api(‘trackItem’, { fb_id:3107076, category:'contest', action:'entry', img_url:'http://www.blueye.com/myimg.png', title:'My Entry!' }, function(response) {
+				//JSON response { success:1 }
+			});
+```
 
 #### Facebook Insights
 Please visit the following link for a list of all stats available through the Facebook Insights API:

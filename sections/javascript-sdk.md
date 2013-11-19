@@ -92,7 +92,7 @@ Track any custom item or user event in your app.
 </tr>
 <tr>
 <td>action</td>
-<td>Action taken an item or event (i.e. followed)</td>
+<td>Action performed on an item or event (i.e. followed)</td>
 <td>String</td>
 </tr>
 <tr>

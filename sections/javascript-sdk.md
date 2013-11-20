@@ -41,6 +41,8 @@ In addition, please modify your Facebook app settings (http://developers.faceboo
 
 Once the steps above are complete, you can use the API calls below to obtain information about the current Facebook users.
 
+#### Basic Facebook User Info
+
 ```javascript
 			HUB.api(‘getFacebookUser’, {}, function(response) { 
 				//response JSON object containing a Facebook user object
@@ -49,7 +51,7 @@ Once the steps above are complete, you can use the API calls below to obtain inf
 			});
 ```
 
-### User's Facebook Friends
+#### User's Facebook Friends
 
 ```javascript
 			HUB.api(‘getFacebookFriends’, {}, function(response) { 
@@ -60,7 +62,7 @@ Once the steps above are complete, you can use the API calls below to obtain inf
 ```
 
 
-## User's Facebook Photo Albums
+#### User's Facebook Photo Albums
 
 ```javascript
 			HUB.api(‘getFacebookAlbums’, {}, function(response) { 
@@ -83,7 +85,7 @@ Once the steps above are complete, you can use the API calls below to obtain inf
 
 ### Register Facebook Open Graph Action
 
-Register an Open Graph action to be used with your custom application.
+Register an Open Graph action to be used with your custom application. Please ensure that the action / object has also been created in your Facebook app settings (https://developers.facebook.com/docs/opengraph/). 
 
 ```javascript
 			HUB.api(‘registerFacebookAction’,  { 
@@ -112,6 +114,22 @@ Publish an open graph action triggered from you custom application.
 				//JSON response containing HUB action ID
 				//i.e. { success:1, id:1298 }
 			});
+```
+
+### Share on Facebook
+
+Publish an open graph action triggered from you custom application.
+
+```javascript
+			HUB.facebookShare(title, link_url, descr, img_url);
+```
+
+### Share on Twitter
+
+Publish an open graph action triggered from you custom application.
+
+```javascript
+			HUB.twitterShare(text, img_or_link_url);
 ```
 
 ### App Level Analytics

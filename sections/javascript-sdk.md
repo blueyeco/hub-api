@@ -78,8 +78,7 @@ The Web SDK simplifies the process of connecting your app to Facebook, by provid
 Register an Open Graph action to be used with your custom application.
 
 ```javascript
-			HUB.api(‘registerAction’,  { 
-				appId: ‘FACEBOOK_APP_ID’,
+			HUB.api(‘registerFacebookAction’,  { 
 				fb_namespace:  ‘FACEBOOK_APP_NAMESPACE’,
 				fb_action: ‘FACEBOOK_ACTION_NAME,
 				fb_object: ‘FACEBOOK_ACTION_OBJECT’,
@@ -95,7 +94,7 @@ Register an Open Graph action to be used with your custom application.
 Publish an open graph action triggered from you custom application.
 
 ```javascript
-			HUB.api(‘publishAction’,  { 
+			HUB.api(‘publishFacebookAction’,  { 
 				fb_action_type_id: ‘FACEBOOK_ACTION_TYPE_ID’,
 				object_id:  ‘UNIQUE_OBJECT_ID_IN_CUSTOM_APP’,
 				object_name:  ‘UNIQUE_OBJECT_NAME_IN_CUSTOM_APP’,

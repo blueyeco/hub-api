@@ -31,10 +31,10 @@ Please contact your account manager to obtain an authorization key required to i
 
 ### Facebook Connect
 
-Provides access to the Hub Platform’s implementation of various Facebook API requests.
+The Web SDK simplifies the process of connecting your app to Facebook, by providing pass-through functions that abtract some of the complexities of connecting to and retrieving data from Facebook. To enable Hub Facebook Connect for you app, enter your Facebook app ID in your application settings on the Hub Developer Console. In addition, please modify your Facebook app settings (http://developers.facebook.com) to hub.blueye.com as the App Domain and http://hub.blueye.com/api/custom as the Website with Facebook Login Site URL.
 
 ```javascript
-			HUB.api(‘initFacebook’,  { 
+			HUB.api(‘getFacebookUser’,  { 
 				appId: ‘YOUR_FACEBOOK_APP_ID’ 
 				}, function(response) { 
 				//handle response 

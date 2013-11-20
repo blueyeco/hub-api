@@ -39,7 +39,7 @@ In addition, please modify your Facebook app settings (http://developers.faceboo
 
 <img src="http://hub.blueye.com/img/fb_app_settings.png" />
 
-Once the steps above are complete, you can use the API calls below to obtain information about the current Facebook users.
+Once the steps above are complete, you can use the API calls below to obtain information about the current Facebook user.
 
 #### Basic Facebook User Info
 

@@ -60,7 +60,7 @@ Once the steps above are complete, you can use the API calls below to obtain inf
 ```
 
 
-### User's Facebook Photo Albums
+## User's Facebook Photo Albums
 
 ```javascript
 			HUB.api(‘getFacebookAlbums’, {}, function(response) { 
@@ -71,7 +71,7 @@ Once the steps above are complete, you can use the API calls below to obtain inf
 ```
 
 
-### User's Facebook Photos
+#### User's Facebook Photos
 
 ```javascript
 			HUB.api(‘getFacebookPhotos’, { album_id:facebookAlbumId }, function(response) { 

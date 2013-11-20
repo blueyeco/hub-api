@@ -31,13 +31,45 @@ Please contact your account manager to obtain an authorization key required to i
 
 ### Facebook Connect
 
-The Web SDK simplifies the process of connecting your app to Facebook, by providing pass-through functions that abtract some of the complexities of connecting to and retrieving data from Facebook. To enable Hub Facebook Connect for you app, enter your Facebook app ID in your application settings on the Hub Developer Console. In addition, please modify your Facebook app settings (http://developers.facebook.com) to hub.blueye.com as the App Domain and http://hub.blueye.com/api/custom as the Website with Facebook Login Site URL.
+The Web SDK simplifies the process of connecting your app to Facebook, by providing pass-through functions that abtract some of the complexities of connecting to and retrieving data from Facebook. To enable Hub Facebook Connect for you app, enter your Facebook app ID in your application settings on the Hub Developer Console. In addition, please modify your Facebook app settings (http://developers.facebook.com) to hub.blueye.com as the 'App Domain' and http://hub.blueye.com/api/custom as the Website with Facebook 'Login Site URL'.
 
 ```javascript
-			HUB.api(‘getFacebookUser’,  { 
-				appId: ‘YOUR_FACEBOOK_APP_ID’ 
-				}, function(response) { 
-				//handle response 
+			HUB.api(‘getFacebookUser’, function(response) { 
+				//response JSON object containing a Facebook user object
+				//i.e. { success:1, user:{ id:"3107076", first_name:"John", last_name:"Doe", ... }
+				//Please visit https://developers.facebook.com/docs/graph-api/reference/user/ for fill list of fields
+			});
+```
+
+### User's Facebook Friends
+
+```javascript
+			HUB.api(‘getFacebookUser’, function(response) { 
+				//response JSON object containing a Facebook user object
+				//i.e. { success:1, user:{ id:"3107076", first_name:"John", last_name:"Doe", ... }
+				//Please visit https://developers.facebook.com/docs/graph-api/reference/user/ for complete list of fields
+			});
+```
+
+
+### User's Facebook Photo Albums
+
+```javascript
+			HUB.api(‘getFacebookAlbums’, function(response) { 
+				//response JSON object containing an array of Facebook albums
+				//i.e. { success:1, data:[] }
+				//Please visit https://developers.facebook.com/docs/reference/api/album/ for complete list of fields
+			});
+```
+
+
+### User's Facebook Photos
+
+```javascript
+			HUB.api(‘getFacebookPhotos’, { album_id:facebookAlbumId }, function(response) { 
+				//response JSON object containing an array of Facebook photos
+				//i.e. { success:1, data:[] }
+				//Please visit https://developers.facebook.com/docs/reference/api/album/ for complete list of fields
 			});
 ```
 

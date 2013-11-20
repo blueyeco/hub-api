@@ -118,15 +118,11 @@ Publish an open graph action triggered from you custom application.
 
 ### Share on Facebook
 
-Publish an open graph action triggered from you custom application.
-
 ```javascript
 			HUB.facebookShare(title, link_url, descr, img_url);
 ```
 
 ### Share on Twitter
-
-Publish an open graph action triggered from you custom application.
 
 ```javascript
 			HUB.twitterShare(text, img_or_link_url);

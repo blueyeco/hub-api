@@ -27,7 +27,7 @@ To connect to the Hub, the mobile SDK requriess an API key that is unique to you
 
 After setting up your app you will now be able to connect to the Hub using the following line of code.
 
-<img src="http://hub.blueye.com/img/docs/connect_hub.png" />
+<img src="http://hub.blueye.com/img/docs/connect_to_hub.png" />
 
 Connecting to the Hub requires passing in your API key obtained from the Developer Console, and a user's ID. The User ID allows us to tie any future actions performed in the app back to a unique user of the app. If you have Facebook connect enabled in your app, the SDK will also automatically tie actions to the current user's Facebook ID as well. Therefore, if Facebook connect is your only user authentication method, simply pass in 0 for the user ID when connecting to the Hub.
 

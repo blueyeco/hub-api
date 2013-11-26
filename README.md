@@ -4,4 +4,4 @@ The Blueye Hub API is a complete suite of tools designed to help you reach your 
 
 ### <a href="https://github.com/blueyeco/hub-api/blob/master/sections/javascript-sdk.md">Web SDK</a>
 
-### <a href="https://github.com/blueyeco/hub-api/blob/master/sections/iOS-sdk.md">Mobile SDK</a>
+### <a href="https://github.com/blueyeco/hub-api/blob/master/sections/ios-sdk.md">Mobile SDK</a>

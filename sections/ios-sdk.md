@@ -23,7 +23,7 @@ Next add a reference to the Hub SDK's header file to your application's Prefix.p
 
 To connect to the Hub, the mobile SDK requries an API key that is unique to your application. To obtain your key, please create a new app after logging in to the Hub Developer Console. In your app settings, be sure to select 'Mobile App' and enter a Google Analytics ID, which is required for event tracking.
 
-<img src="http://hub.blueye.com/img/docs/dev_console.png" />
+<img src="http://hub.blueye.com/img/docs/dev_settings.png" />
 
 After setting up your app you will now be able to connect to the Hub using the following line of code.
 

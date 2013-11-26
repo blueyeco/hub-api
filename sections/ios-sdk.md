@@ -37,7 +37,7 @@ The Hub provides support for mobile screen tracking in addition to granular even
 
 <img src="http://hub.blueye.com/img/docs/track_screen.png" />
 
-The Hub SDK also allows you complete flexiblity in tracking any and all actions performed in your app through the 'trackItem' method call. Each action is assumed to be performed on an 'item' and thus the item's unique ID is required. If the action is of global nature ('i.e. user invited friends to use the app'), simply pass in 0 as the item ID. The action name (i.e. like, want, follow, purchase, play, etc.) should next be specified, but is optional. If omitted, an action of type 'view' will be used.
+The Hub SDK also allows you complete flexiblity in tracking any and all actions performed in your app through the 'trackItem' method call. Each action is assumed to be performed on an 'item' and thus the item's unique ID is required. If the action is of global nature (i.e. user invited friends to use the app), simply pass in 0 as the item ID. The action name (i.e. like, want, follow, purchase, play, etc.) should next be specified, but is optional. If omitted, an action of type 'view' will be used.
 
 <img src="http://hub.blueye.com/img/docs/track_item.png" />
 

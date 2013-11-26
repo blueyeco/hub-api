@@ -43,6 +43,8 @@ The Hub SDK also allows you complete flexiblity in tracking any and all actions 
 
 As shown above, additional metdata such as a brief title or brief description, or an image URL, can also be set, but are also not required. The more information that is specified though, the more engaging the data in your analytics dashboard will be, as show in the next section.
 
-## Analytics Dashboard
+### Analytics Dashboard
 
 All events tracked during the life of your Mobile app while connected to the Hub can then be analyzed in our insights dashboard. Additional users can be segmented and filtered by action, and custom audiences can be created that plug directly into our media advertising platform.
+
+<img src="http://hub.blueye.com/img/docs/analytics.png" />

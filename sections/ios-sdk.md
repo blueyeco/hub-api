@@ -5,7 +5,7 @@ The iOS Mobile SDK allows you to integrating you custom mobile application into 
 
 Download the SDK <a href="https://hub.blueye.com/resources/BlueyeHub.framework.zip" target="_blank">here</a> and extract the files anywhere on your local machine.
 
-## Add the Hub SDK to your iOS Project
+### Add the Hub SDK to your iOS Project
 
 Open Xcode, right click Frameworks in the project navigator, select 'Add Files to...' and select the folder extracted when downloading the SDK (make sure to just select the folder level and not an individual file).
 
@@ -19,7 +19,7 @@ Next add a reference to the Hub SDK's header file to your application Prefix.pch
 
 <img src="http://hub.blueye.com/img/docs/prefix_pch.png" />
 
-## Authentication
+### Authentication
 
 To connect to the Hub, the mobile SDK requriess an API key that is unique to your application. To obtain your key, please create a new app after logging in to the Hub Developer Console. In your app settings, be sure to select 'Mobile App' and enter a Google Analytics ID, which is required for event tracking.
 

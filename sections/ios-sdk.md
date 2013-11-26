@@ -11,17 +11,17 @@ Open Xcode, right click Frameworks in the project navigator, select 'Add Files t
 
 <img src="http://hub.blueye.com/img/docs/add_framework.png" />
 
-If successfully added, you should see the framework BlueyeHub in now listed under your Frameworks directory.
+If successfully added, you should see the framework BlueyeHub now listed under your Frameworks directory.
 
 <img src="http://hub.blueye.com/img/docs/frameworks.png" />
 
-Next add a reference to the Hub SDK's header file to your application Prefix.pch file. This will allow the Hub's public methods to be accessible throughout your application.
+Next add a reference to the Hub SDK's header file to your application's Prefix.pch file. This will allow the Hub's public methods to be accessible throughout your application.
 
 <img src="http://hub.blueye.com/img/docs/prefix_pch.png" />
 
 ## Authentication
 
-To connect to the Hub, the mobile SDK requriess an API key that is unique to your application. To obtain your key, please create a new app after logging in to the Hub Developer Console. In your app settings, be sure to select 'Mobile App' and enter a Google Analytics ID, which is required for event tracking.
+To connect to the Hub, the mobile SDK requries an API key that is unique to your application. To obtain your key, please create a new app after logging in to the Hub Developer Console. In your app settings, be sure to select 'Mobile App' and enter a Google Analytics ID, which is required for event tracking.
 
 <img src="http://hub.blueye.com/img/docs/dev_console.png" />
 
@@ -37,14 +37,14 @@ The Hub provides support for mobile screen tracking in addition to granular even
 
 <img src="http://hub.blueye.com/img/docs/track_screen.png" />
 
-The Hub SDK also allows you complete flexiblity in tracking any and all actions perform in your app through the 'trackItem' method call. Each action is assumed to be performed on an 'item' and thus the item's unique ID is required. If the action is of global nature ('i.e. user invited a friend to use the app'), simply pass in 0 as the item ID. Next the action name, such as like, want, follow, purchase, play, etc. should next be specified, but is optional. If omitted, an action of type 'view' will be used.
+The Hub SDK also allows you complete flexiblity in tracking any and all actions performed in your app through the 'trackItem' method call. Each action is assumed to be performed on an 'item' and thus the item's unique ID is required. If the action is of global nature ('i.e. user invited friends to use the app'), simply pass in 0 as the item ID. The action name (i.e. like, want, follow, purchase, play, etc.) should next be specified, but is optional. If omitted, an action of type 'view' will be used.
 
 <img src="http://hub.blueye.com/img/docs/track_item.png" />
 
-As shown above, additional metdata such as a brief title or brief description, or an image URL, can also be set, but are also not required. The more information that is specified though, the more engaging the data in your analytics dashboard will be, as show in the next section.
+As shown above, additional metdata such as a title / brief description or an image URL can also be set, but are not required. The more information that is specified though, the more engaging the data in your analytics dashboard will be, as shown in the next section.
 
 ### Analytics Dashboard
 
-All events tracked during the life of your Mobile app while connected to the Hub can then be analyzed in our insights dashboard. Additional users can be segmented and filtered by action, and custom audiences can be created that plug directly into our media advertising platform.
+All events tracked during the life of your Mobile app can then be analyzed in our insights dashboard. Additionally, users can be segmented and filtered by action, and custom audiences can be created that plug directly into our media advertising platform.
 
 <img src="http://hub.blueye.com/img/docs/analytics.png" />

@@ -85,7 +85,7 @@ Once the steps above are complete, you can use the API calls below to obtain inf
 
 ### Register Facebook Open Graph Action
 
-Register an Open Graph action to be used with your custom application. Please ensure that the action / object has also been created in your Facebook app settings (https://developers.facebook.com/docs/opengraph/). 
+Register an Open Graph action to be used with your custom application. Please ensure that the action / object has also been created in your Facebook app settings (https://developers.facebook.com/docs/opengraph/). <b>Please note this call should only be made once for each action, and you will need to save the returned ID for making subsequent publishing calls.</b>
 
 ```javascript
 			HUB.api(‘registerFacebookAction’,  { 

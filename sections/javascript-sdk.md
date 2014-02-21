@@ -33,11 +33,11 @@ Please contact your account manager to obtain an authorization key required to i
 
 The Web SDK simplifies the process of connecting your app to Facebook, by providing pass-through functions that abtract some of the complexities of connecting to and retrieving data from Facebook. To enable Hub Facebook Connect for you app, enter your Facebook app ID in your application settings on the Hub Developer Console. 
 
-<img src="http://hub.blueye.com/img/hub_app_settings.png" />
+<img src="http://hub.blueye.com/img/docs/hub_app_settings.png" />
 
 In addition, please modify your Facebook app settings (http://developers.facebook.com) to use hub.blueye.com as the 'App Domain' and http://hub.blueye.com/api/custom as the Website with Facebook 'Login Site URL'.
 
-<img src="http://hub.blueye.com/img/fb_app_settings.png" />
+<img src="http://hub.blueye.com/img/docs/fb_app_settings.png" />
 
 Once the steps above are complete, you can use the API calls below to obtain information about the current Facebook user.
 

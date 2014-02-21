@@ -31,7 +31,7 @@ Please contact your account manager to obtain an authorization key required to i
 
 ### Facebook Connect 
 
-The Web SDK simplifies the process of connecting your app to Facebook, by providing pass-through functions that abtract some of the complexities of connecting to and retrieving data from Facebook. To enable Hub Facebook Connect for you app, enter your Facebook app ID in your application settings on the Hub Developer Console. 
+The Web SDK simplifies the process of connecting your app to Facebook, by providing pass-through functions that abstract some of the complexities of connecting to and retrieving data from Facebook. To enable Hub Facebook Connect for you app, enter your Facebook app ID in your application settings on the Hub Developer Console. 
 
 <img src="http://hub.blueye.com/img/docs/hub_app_settings.png" />
 

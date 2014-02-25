@@ -32,7 +32,7 @@ Please contact your account manager to obtain an authorization key required to i
 			});
 ```
 
-In many instances, a user may authenticate to your application at some point after you have already initialized the Hub SDK. If so you can instead set the user by making a call to the 'setUser' SDK method.
+In many instances, a user may authenticate to your application at some point after you have already initialized the Hub SDK. If so, you can instead set the user by making a call to the 'setUser' SDK method.
 
 ```javascript
 			HUB.setUser({ uid:345, name:"John Doe", email:"johndoe@gmail.com" }, function(res) {

@@ -13,12 +13,15 @@ The SDK inserts a div element with the ID hub-root, containing an iframe with th
 
 ### Authentication
 
-Please contact your account manager to obtain an authorization key required to initialize the SDK.
+Please contact your account manager to obtain an authorization key required to initialize the SDK. When initializing the SDK, optional user identifying information in the form of a user id, email address, or name can be passed in. This allows The Hub to tie any actions tracked in your app to a unique user to facilitate advanced audience segmentation in The Hub developer console.
 
 
 ```javascript
 			HUB.init({
 				apiKey: '1a1e31b4d4a3b5191ca22a6919ade490'
+				uid:345, /* optional */
+				email:'johndoe@gmail.com', /* optional */
+				name:'John Doe' /* optional */
 			}, function(response) {
 				if(response.success) {
 					alert(‘Successfully initialized the SDK’);
@@ -28,6 +31,14 @@ Please contact your account manager to obtain an authorization key required to i
 				}
 			});
 ```
+
+In many instances, a user may authenticate to your application at some point after you have already initialized the Hub SDK. If so you can instead set the user by making a call to the 'setUser' SDK method.
+
+```javascript
+			HUB.setUser({ uid:345, name:"John Doe", email:"johndoe@gmail.com" }, function(res) {
+				console.log(res);
+			});
+```			
 
 ### Facebook Connect 
 
@@ -150,7 +161,7 @@ Track any custom item or user event in your app.
 </tr>
 <tr>
 <td>user_id</td>
-<td>Unique user ID in your system (optional only if FB ID below is specified) </td>
+<td>Unique user ID in your system. If the user ID was passed when initializing the SDK, or you made a subsequent call to 'Hub.setUser', it is not required here.</td>
 <td>String</td>
 </tr>
 <tr>

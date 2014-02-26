@@ -74,7 +74,7 @@ Track any custom item or user event in your app.
 </tr>
 <tr>
 <td>user_id</td>
-<td>Unique user ID in your system. If the user ID was passed when initializing the SDK, or you made a subsequent call to 'Hub.setUser', it is not required here.</td>
+<td>Unique user ID in your system. If a user profile was created using the methods describe above, it is not required here.</td>
 <td>String</td>
 </tr>
 <tr>

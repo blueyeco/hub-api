@@ -9,7 +9,7 @@ To initialize the SDK asynchronously, include the following line of code just be
 
 ```javascript
 
-<script type="text/javascript">window.hubAsyncInit=function(){HUB.init({apiKey:"YOUR_API_KEY"},function(e){console.log(e)})};(function(e,t,n){var r,i=e.getElementsByTagName(t)[0];if(e.getElementById(n)){return}r=e.createElement(t);r.id=n;r.src="//hub.blueye.com/js/api.js";i.parentNode.insertBefore(r,i)})(document,"script","blueyehub-sdk")</script>
+<script type="text/javascript">window.hubAsyncInit=function(){HUB.init({apiKey:"YOUR_API_KEY"})};(function(e,t,n){var r,i=e.getElementsByTagName(t)[0];if(e.getElementById(n)){return}r=e.createElement(t);r.id=n;r.src="//hub.blueye.com/js/api.js";i.parentNode.insertBefore(r,i)})(document,"script","blueyehub-sdk")</script>
 
 ```	
 
@@ -101,6 +101,14 @@ Track any custom item or user event in your app.
 					//JSON response { success:1 }
 				}
 			);
+```
+
+### Quick Tracking
+
+For tracking of simple app activity that does not require any of the details afforded by the more expansive tracking call above, simply call the HUB.track method. It is highly advised that a user profile be created prior to using this method so that these actions are auto-tied to individual users.
+
+```javascript
+			HUB.track('sign up click');
 ```
 
 ### Facebook Connect 

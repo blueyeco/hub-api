@@ -3,17 +3,25 @@
 The Javascript SDK provides a set of client-side calls for integrating a custom external application into the Hub Platform.
 
 
-### Initializing the SDK
+### One line SDK Initialization
 
-To initialize the SDK, include the following Javascript file into your web application
+To initialize the SDK asynchronously, include the following line of code just before the page closing </head> tag:
 
-http://hub.blueye.com/js/api.js
+```javascript
+
+<script type="text/javascript">window.hubAsyncInit=function(){HUB.init({apiKey:"YOUR_API_KEY"},function(e){console.log(e)})};(function(e,t,n){var r,i=e.getElementsByTagName(t)[0];if(e.getElementById(n)){return}r=e.createElement(t);r.id=n;r.src="//hub.blueye.com/js/api.js";i.parentNode.insertBefore(r,i)})(document,"script","blueyehub-sdk")</script>
+
+```	
+
+Please contact your account manager to obtain YOUR_API_KEY required to initialize the SDK.
 
 The SDK inserts a div element with the ID hub-root, containing an iframe with the ID hub-frame, into your web application’s source. The HUB object included in the SDK provides access to the various API requests describe in the section below.
 
-### Authentication
+### Manual Initialization
 
-Please contact your account manager to obtain an authorization key required to initialize the SDK. When initializing the SDK, optional user identifying information in the form of a user id, email address, or name can be passed in. This allows The Hub to tie any actions tracked in your app to a unique user to facilitate advanced audience segmentation in The Hub developer console.
+If you prefer to directly initialize the SDK, you can do so by including the file https://hub.blueye.com/js/api.js in your web page and making a call to the HUB.init method as show below.
+
+When initializing the SDK manually, optional user identifying information in the form of a user id, email address, or name can be passed in. This allows The Hub to tie any actions tracked in your app to a unique user to facilitate advanced audience segmentation in The Hub developer console.
 
 
 ```javascript
@@ -32,7 +40,11 @@ Please contact your account manager to obtain an authorization key required to i
 			});
 ```
 
-In many instances, a user may authenticate to your application at some point after you have already initialized the Hub SDK. If so, you can instead set the user by making a call to the 'setUser' SDK method.
+Passing in user information in the init call allows you to skip the next step of "Creating a User Profile".
+
+### Creating a User Profile
+
+If you used the one line asynchorous method to initialize the SDK, remember to create a user profile so that all actions can be tied to unique individuals for advanced targeting and segmentation. This method is also useful if you called Hub.init manually but neglected to pass in user information.
 
 ```javascript
 			HUB.setUser({ uid:345, name:"John Doe", email:"johndoe@gmail.com" }, function(res) {

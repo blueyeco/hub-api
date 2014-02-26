@@ -19,7 +19,7 @@ The SDK inserts a div element with the ID hub-root, containing an iframe with th
 
 ### Manual Initialization
 
-If you prefer to directly initialize the SDK, you can do so by including the file https://hub.blueye.com/js/api.js in your web page and making a call to the HUB.init method as show below.
+If you prefer to directly initialize the SDK, you can do so by including the file https://hub.blueye.com/js/api.js in your web page and making a call to the HUB.init method as shown below.
 
 When initializing the SDK manually, optional user identifying information in the form of a user id, email address, or name can be passed in. This allows the Hub to tie any actions tracked in your app to a unique user to facilitate advanced audience segmentation in the Hub developer console.
 

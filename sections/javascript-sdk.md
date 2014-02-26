@@ -15,7 +15,7 @@ To initialize the SDK asynchronously, include the following line of code just be
 
 Please contact your account manager to obtain YOUR_API_KEY required to initialize the SDK.
 
-The SDK inserts a div element with the ID hub-root, containing an iframe with the ID hub-frame, into your web application’s source. The HUB object included in the SDK provides access to the various API requests describe in the following sections below.
+The SDK inserts a div element with the ID hub-root, containing an iframe with the ID hub-frame, into your web application’s source. The HUB object included in the SDK provides access to the various API requests described in the following sections below.
 
 ### Manual Initialization
 

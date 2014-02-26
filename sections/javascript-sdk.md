@@ -50,7 +50,58 @@ If you used the one line asynchorous method to initialize the SDK, remember to c
 			HUB.setUser({ uid:345, name:"John Doe", email:"johndoe@gmail.com" }, function(res) {
 				console.log(res);
 			});
-```			
+```
+
+### App Action Tracking
+
+Track any custom item or user event in your app.
+
+<table>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>category</td>
+<td>Category of item (i.e. Wines) or type of event</td>
+<td>String</td>
+</tr>
+<tr>
+<td>action</td>
+<td>Action performed on an item or event (i.e. followed)</td>
+<td>String</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>Unique user ID in your system. If the user ID was passed when initializing the SDK, or you made a subsequent call to 'Hub.setUser', it is not required here.</td>
+<td>String</td>
+</tr>
+<tr>
+<td>fb_id</td>
+<td>User's Facebook ID if applicable (optional)</td>
+<td>String</td>
+</tr>
+<tr>
+<td>title</td>
+<td>A name or brief description for the item or event (optional) </td>
+<td>String</td>
+</tr>
+<tr>
+<td>img_url</td>
+<td>Image URL for item or event (optional) </td>
+<td>String</td>
+</tr>
+</table>
+
+```javascript
+			HUB.api(‘trackItem’, { fb_id:3107076, category:'contest', action:'entry', 
+						img_url:'http://www.blueye.com/myimg.png', title:'My Entry!' }, 
+				function(response) {
+					//JSON response { success:1 }
+				}
+			);
+```
 
 ### Facebook Connect 
 
@@ -149,57 +200,6 @@ Publish an open graph action triggered from you custom application.
 
 ```javascript
 			HUB.twitterShare(text, img_or_link_url);
-```
-
-### App Level Analytics
-
-Track any custom item or user event in your app.
-
-<table>
-<tr>
-<th>Field</th>
-<th>Description</th>
-<th>Type</th>
-</tr>
-<tr>
-<td>category</td>
-<td>Category of item (i.e. Wines) or type of event</td>
-<td>String</td>
-</tr>
-<tr>
-<td>action</td>
-<td>Action performed on an item or event (i.e. followed)</td>
-<td>String</td>
-</tr>
-<tr>
-<td>user_id</td>
-<td>Unique user ID in your system. If the user ID was passed when initializing the SDK, or you made a subsequent call to 'Hub.setUser', it is not required here.</td>
-<td>String</td>
-</tr>
-<tr>
-<td>fb_id</td>
-<td>User's Facebook ID if applicable (optional)</td>
-<td>String</td>
-</tr>
-<tr>
-<td>title</td>
-<td>A name or brief description for the item or event (optional) </td>
-<td>String</td>
-</tr>
-<tr>
-<td>img_url</td>
-<td>Image URL for item or event (optional) </td>
-<td>String</td>
-</tr>
-</table>
-
-```javascript
-			HUB.api(‘trackItem’, { fb_id:3107076, category:'contest', action:'entry', 
-						img_url:'http://www.blueye.com/myimg.png', title:'My Entry!' }, 
-				function(response) {
-					//JSON response { success:1 }
-				}
-			);
 ```
 
 #### Facebook Insights

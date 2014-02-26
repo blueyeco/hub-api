@@ -5,7 +5,7 @@ The Javascript SDK provides a set of client-side calls for integrating a custom 
 
 ### One line SDK Initialization
 
-To initialize the SDK asynchronously, include the following line of code just before the page closing '</head>' tag:
+To initialize the SDK asynchronously, include the following line of code just before the page closing &lt;/head&gt; tag:
 
 ```javascript
 

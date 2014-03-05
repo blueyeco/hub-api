@@ -9,7 +9,7 @@ To initialize the SDK asynchronously, include the following line of code just be
 
 ```javascript
 
-<script type="text/javascript">window.hubAsyncInit=function(){HUB.init({apiKey:"YOUR_API_KEY"})};(function(e,t,n){var r,i=e.getElementsByTagName(t)[0];if(e.getElementById(n)){return}r=e.createElement(t);r.id=n;r.src="//hub.blueye.com/js/api.js";i.parentNode.insertBefore(r,i)})(document,"script","blueyehub-sdk")</script>
+<script type="text/javascript">window.hubAsyncInit=function(){HUB.init({apiKey:"YOUR_API_KEY"})};(function(e,t,n){var r,i=e.getElementsByTagName(t)[0];if(e.getElementById(n)){return}r=e.createElement(t);r.id=n;r.src="//blueyehub.com/js/api.js";i.parentNode.insertBefore(r,i)})(document,"script","blueyehub-sdk")</script>
 
 ```	
 
@@ -19,7 +19,7 @@ The SDK inserts a div element with the ID hub-root, containing an iframe with th
 
 ### Manual Initialization
 
-If you prefer to directly initialize the SDK, you can do so by including the file https://hub.blueye.com/js/api.js in your web page and making a call to the HUB.init method as shown below.
+If you prefer to directly initialize the SDK, you can do so by including the file https://blueyehub.com/js/api.js in your web page and making a call to the HUB.init method as shown below.
 
 When initializing the SDK manually, optional user identifying information in the form of a user id, email address, or name can be passed in. This allows the Hub to tie any actions tracked in your app to a unique user to facilitate advanced audience segmentation in the Hub developer console.
 
@@ -115,11 +115,11 @@ For tracking of simple app activity that does not require any of the details aff
 
 The Web SDK simplifies the process of connecting your app to Facebook, by providing pass-through functions that abstract some of the complexities of connecting to and retrieving data from Facebook. To enable Hub Facebook Connect for you app, enter your Facebook app ID in your application settings on the Hub Developer Console. 
 
-<img src="http://hub.blueye.com/img/docs/hub_app_settings.png" />
+<img src="https://blueyehub.com/img/docs/hub_app_settings.png" />
 
-In addition, please modify your Facebook app settings (http://developers.facebook.com) to use hub.blueye.com as the 'App Domain' and http://hub.blueye.com/api/custom as the Website with Facebook 'Login Site URL'.
+In addition, please modify your Facebook app settings (http://developers.facebook.com) to use blueyehub.com as the 'App Domain' and http://hub.blueye.com/api/custom as the Website with Facebook 'Login Site URL'.
 
-<img src="http://hub.blueye.com/img/docs/fb_app_settings.png" />
+<img src="https://blueyehub.com/img/docs/fb_app_settings.png" />
 
 Once the steps above are complete, you can use the API calls below to obtain information about the current Facebook user.
 

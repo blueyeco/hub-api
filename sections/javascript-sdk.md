@@ -52,6 +52,14 @@ If you used the one line asynchorous method to initialize the SDK, remember to c
 			});
 ```
 
+### Quick Action Tracking
+
+For tracking of simple app activity that does not require any of the details afforded by the more expansive tracking call above, simply call the HUB.track method. It is highly advised that a user profile be created prior to using this method so that these actions are auto-tied to individual users.
+
+```javascript
+			HUB.track('sign up click', { mycustomprop:'test', mycustomprop2:'blue' });
+```
+
 ### App Action Tracking
 
 Track any custom item or user event in your app.
@@ -101,14 +109,6 @@ Track any custom item or user event in your app.
 					//JSON response { success:1 }
 				}
 			);
-```
-
-### Quick Tracking
-
-For tracking of simple app activity that does not require any of the details afforded by the more expansive tracking call above, simply call the HUB.track method. It is highly advised that a user profile be created prior to using this method so that these actions are auto-tied to individual users.
-
-```javascript
-			HUB.track('sign up click');
 ```
 
 ### Facebook Connect 

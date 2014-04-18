@@ -40,7 +40,7 @@ Required Post Parameters:
 </tr>
 <tr>
 <td>token</td>
-<td>Your current session token obtained from making an sdk/connect call</td>
+<td>Your current session token obtained from making a sdk/connect call</td>
 <td>String</td>
 </tr>
 </table>
@@ -58,7 +58,7 @@ Required Post Parameters:
 </tr>
 <tr>
 <td>token</td>
-<td>Your current session token obtained from making an sdk/connect call</td>
+<td>Your current session token obtained from making a sdk/connect call</td>
 <td>String</td>
 </tr>
 <tr>
@@ -81,40 +81,7 @@ Required Post Parameters:
 </tr>
 <tr>
 <td>token</td>
-<td>Your current session token obtained from making an sdk/connect call</td>
-<td>String</td>
-</tr>
-<tr>
-<td>audience ID</td>
-<td>FB's unqiue ID for this audience</td>
-<td>String</td>
-</tr>
-<tr>
-<td>users</td>
-<td>array of hashed values per FB documentation https://developers.facebook.com/docs/reference/ads-api/custom-audience-targeting</td>
-<td>json array</td>
-</tr>
-</table>
-
-Example:
-```javascript
-https://blueyehub/sdk/customaudiences/addusers?token=c95633d8597a4a14a9078a83b7e7c17e&audience_id=6014146538248&users=[{ "email_hash":"SHA256_email_hash_1" }, { "email_hash":"SHA256_email_hash_2" }]
-```
-
-#### Remove users from a custom audience
-```javascript
-Endpoint: https://blueyehub/sdk/customaudiences/removeusers
-```
-Required Post Parameters:
-<table>
-<tr>
-<th>Field</th>
-<th>Description</th>
-<th>Type</th>
-</tr>
-<tr>
-<td>token</td>
-<td>Your current session token obtained from making an sdk/connect call</td>
+<td>Your current session token obtained from making a sdk/connect call</td>
 <td>String</td>
 </tr>
 <tr>
@@ -131,5 +98,38 @@ Required Post Parameters:
 
 Example:
 ```javascript
-https://blueyehub/sdk/customaudiences/removeusers?token=c95633d8597a4a14a9078a83b7e7c17e&audience_id=6014146538248&users=[{ "email_hash":"SHA256_email_hash_1" }, { "email_hash":"SHA256_email_hash_2" }]
+https://blueyehub/sdk/customaudiences/addusers?token=597a4a14a9078a83b7e7c17e&audience_id=9914146538248&users=[{ "email_hash":"SHA256_email_hash_1" }, { "email_hash":"SHA256_email_hash_2" }]
+```
+
+#### Remove users from a custom audience
+```javascript
+Endpoint: https://blueyehub/sdk/customaudiences/removeusers
+```
+Required Post Parameters:
+<table>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>token</td>
+<td>Your current session token obtained from making a sdk/connect call</td>
+<td>String</td>
+</tr>
+<tr>
+<td>audience ID</td>
+<td>FB's unqiue ID for this audience</td>
+<td>String</td>
+</tr>
+<tr>
+<td>users</td>
+<td>array of hashed values per FB documentation <a href="https://developers.facebook.com/docs/reference/ads-api/custom-audience-targeting" target="_blank">Facebook Custom Audiences Documentation</a></td>
+<td>json array</td>
+</tr>
+</table>
+
+Example:
+```javascript
+https://blueyehub/sdk/customaudiences/removeusers?token=d8597a4a14a9078a83b7e7c17e&audience_id=9914146538248&users=[{ "email_hash":"SHA256_email_hash_1" }, { "email_hash":"SHA256_email_hash_2" }]
 ```

@@ -58,5 +58,6 @@ Required Post Parameters:
 <td>the name of your custom audience</td>
 <td>String</td>
 </tr>
+</table>
 
 ```

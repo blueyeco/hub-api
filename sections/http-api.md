@@ -34,7 +34,7 @@ Endpoint: http://blueyehub/sdk/customaudiences?token=YOUR_TOKEN
 
 #### Create a new custom audience
 ```javascript
-Endpoint: http://blueyehub/sdk/customaudiences
+Endpoint: http://blueyehub/sdk/customaudiences/create
 ```
 Required Post Parameters:
 <table>

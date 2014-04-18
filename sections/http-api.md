@@ -27,18 +27,14 @@ The Hub HTTP API provides a window into the Facebook Ads API to allow you to pro
 
 Through the Hub HTTP API, you can manage your Facebook custom audiences, fow which the Hub exposes four endpoints to do so.
 
+#### Retrieve all of your custom audiences
 ```javascript
-
-Retrieve all of your custom audiences
 Endpoint: http://blueyehub/sdk/customaudiences?token=YOUR_TOKEN
-
 ```
 
-```html
-
-Create a new custom audiences
+#### Create a new custom audiences
+```javascript
 Endpoint: http://blueyehub/sdk/customaudiences
-
 ```
 
 Required Post Parameters:

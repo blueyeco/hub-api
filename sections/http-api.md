@@ -86,7 +86,7 @@ Required Post Parameters:
 </tr>
 <tr>
 <td>audience ID</td>
-<td>FB's unqiue ID for this audience</td>
+<td>FB's unique ID for this audience</td>
 <td>String</td>
 </tr>
 <tr>
@@ -119,7 +119,7 @@ Required Post Parameters:
 </tr>
 <tr>
 <td>audience ID</td>
-<td>FB's unqiue ID for this audience</td>
+<td>FB's unique ID for this audience</td>
 <td>String</td>
 </tr>
 <tr>

@@ -32,11 +32,10 @@ Through the Hub HTTP API, you can manage your Facebook custom audiences, fow whi
 Endpoint: http://blueyehub/sdk/customaudiences?token=YOUR_TOKEN
 ```
 
-#### Create a new custom audiences
+#### Create a new custom audience
 ```javascript
 Endpoint: http://blueyehub/sdk/customaudiences
 ```
-
 Required Post Parameters:
 <table>
 <tr>

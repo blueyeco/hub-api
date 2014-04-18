@@ -31,6 +31,19 @@ Through the Hub HTTP API, you can manage your Facebook custom audiences, fow whi
 ```javascript
 Endpoint: http://blueyehub/sdk/customaudiences?token=YOUR_TOKEN
 ```
+Required Post Parameters:
+<table>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>token</td>
+<td>Your current session token obtained from making an sdk/connect call</td>
+<td>String</td>
+</tr>
+</table>
 
 #### Create a new custom audience
 ```javascript
@@ -43,16 +56,70 @@ Required Post Parameters:
 <th>Description</th>
 <th>Type</th>
 </tr>
-
 <tr>
 <td>token</td>
 <td>Your current session token obtained from making an sdk/connect call</td>
 <td>String</td>
 </tr>
-
 <tr>
 <td>name</td>
 <td>the name of your custom audience</td>
 <td>String</td>
+</tr>
+</table>
+
+#### Add users to a custom audience
+```javascript
+Endpoint: http://blueyehub/sdk/customaudiences/addusers
+```
+Required Post Parameters:
+<table>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>token</td>
+<td>Your current session token obtained from making an sdk/connect call</td>
+<td>String</td>
+</tr>
+<tr>
+<td>audience ID</td>
+<td>FB's unqiue ID for this audience</td>
+<td>String</td>
+</tr>
+<tr>
+<td>users</td>
+<td>array of hashed values per FB documentation https://developers.facebook.com/docs/reference/ads-api/custom-audience-targeting</td>
+<td>json array</td>
+</tr>
+</table>
+
+#### Remove users from a custom audience
+```javascript
+Endpoint: http://blueyehub/sdk/customaudiences/removeusers
+```
+Required Post Parameters:
+<table>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>token</td>
+<td>Your current session token obtained from making an sdk/connect call</td>
+<td>String</td>
+</tr>
+<tr>
+<td>audience ID</td>
+<td>FB's unqiue ID for this audience</td>
+<td>String</td>
+</tr>
+<tr>
+<td>users</td>
+<td>array of hashed values per FB documentation https://developers.facebook.com/docs/reference/ads-api/custom-audience-targeting</td>
+<td>json array</td>
 </tr>
 </table>

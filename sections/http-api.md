@@ -39,6 +39,8 @@ Endpoint: http://blueyehub/sdk/customaudiences?token=YOUR_TOKEN
 Create a new custom audiences
 Endpoint: http://blueyehub/sdk/customaudiences
 
+```
+
 Required Post Parameters:
 <table>
 <tr>
@@ -59,5 +61,3 @@ Required Post Parameters:
 <td>String</td>
 </tr>
 </table>
-
-```

@@ -10,7 +10,7 @@ To initialize a connection to The Hub, make the following HTTP post call with yo
 
 ```javascript
 
-https://blueyehub/sdk/connect?api_key=YOUR_API_KEY
+https://blueyehub.com/sdk/connect?api_key=YOUR_API_KEY
 
 Response: { "success":1, "token":"YOUR_TOKEN" }
 
@@ -29,7 +29,7 @@ Through the Hub HTTP API, you can manage your Facebook custom audiences, for whi
 
 #### Retrieve all of your custom audiences
 ```javascript
-Endpoint: https://blueyehub/sdk/customaudiences
+Endpoint: https://blueyehub.com/sdk/customaudiences
 ```
 Required Post Parameters:
 <table>
@@ -47,7 +47,7 @@ Required Post Parameters:
 
 #### Create a new custom audience
 ```javascript
-Endpoint: https://blueyehub/sdk/customaudiences/create
+Endpoint: https://blueyehub.com/sdk/customaudiences/create
 ```
 Required Post Parameters:
 <table>
@@ -70,7 +70,7 @@ Required Post Parameters:
 
 #### Add users to a custom audience
 ```javascript
-Endpoint: https://blueyehub/sdk/customaudiences/addusers
+Endpoint: https://blueyehub.com/sdk/customaudiences/addusers
 ```
 Required Post Parameters:
 <table>
@@ -98,12 +98,12 @@ Required Post Parameters:
 
 Example:
 ```javascript
-https://blueyehub/sdk/customaudiences/addusers?token=597a4a14a9078a83b7e7c17e&audience_id=9914146538248&users=[{ "email_hash":"SHA256_email_hash_1" }, { "email_hash":"SHA256_email_hash_2" }]
+https://blueyehub.com/sdk/customaudiences/addusers?token=597a4a14a9078a83b7e7c17e&audience_id=9914146538248&users=[{ "email_hash":"SHA256_email_hash_1" }, { "email_hash":"SHA256_email_hash_2" }]
 ```
 
 #### Remove users from a custom audience
 ```javascript
-Endpoint: https://blueyehub/sdk/customaudiences/removeusers
+Endpoint: https://blueyehub.com/sdk/customaudiences/removeusers
 ```
 Required Post Parameters:
 <table>
@@ -131,5 +131,5 @@ Required Post Parameters:
 
 Example:
 ```javascript
-https://blueyehub/sdk/customaudiences/removeusers?token=d8597a4a14a9078a83b7e7c17e&audience_id=9914146538248&users=[{ "email_hash":"SHA256_email_hash_1" }, { "email_hash":"SHA256_email_hash_2" }]
+https://blueyehub.com/sdk/customaudiences/removeusers?token=d8597a4a14a9078a83b7e7c17e&audience_id=9914146538248&users=[{ "email_hash":"SHA256_email_hash_1" }, { "email_hash":"SHA256_email_hash_2" }]
 ```

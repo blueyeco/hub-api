@@ -5,7 +5,7 @@ The HTTP API provides a set of server-side calls for integrating a custom extern
 
 ### Connecting Your Application
 
-The endpoint for all HTTP calls is https://blueyehub.com/sdk
+The endpoint for all HTTP calls is https://blueyehub.com/sdk/
 To initialize a connection to The Hub, make the following HTTP post call with your unique api key:
 
 ```javascript

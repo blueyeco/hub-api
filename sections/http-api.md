@@ -10,7 +10,7 @@ To initialize a connection to The Hub, make the following HTTP post call with yo
 
 ```javascript
 
-http://blueyehub/sdk/connect?api_key=YOUR_API_KEY
+https://blueyehub/sdk/connect?api_key=YOUR_API_KEY
 
 Response: { "success":1, "token":"YOUR_TOKEN" }
 
@@ -29,7 +29,7 @@ Through the Hub HTTP API, you can manage your Facebook custom audiences, fow whi
 
 #### Retrieve all of your custom audiences
 ```javascript
-Endpoint: http://blueyehub/sdk/customaudiences?token=YOUR_TOKEN
+Endpoint: https://blueyehub/sdk/customaudiences?token=YOUR_TOKEN
 ```
 Required Post Parameters:
 <table>
@@ -47,7 +47,7 @@ Required Post Parameters:
 
 #### Create a new custom audience
 ```javascript
-Endpoint: http://blueyehub/sdk/customaudiences/create
+Endpoint: https://blueyehub/sdk/customaudiences/create
 ```
 Required Post Parameters:
 <table>
@@ -70,7 +70,7 @@ Required Post Parameters:
 
 #### Add users to a custom audience
 ```javascript
-Endpoint: http://blueyehub/sdk/customaudiences/addusers
+Endpoint: https://blueyehub/sdk/customaudiences/addusers
 ```
 Required Post Parameters:
 <table>
@@ -96,9 +96,14 @@ Required Post Parameters:
 </tr>
 </table>
 
+Example:
+```javascript
+https://blueyehub/sdk/customaudiences/addusers?token=c95633d8597a4a14a9078a83b7e7c17e&audience_id=6014146538248&users=[{ "email_hash":"SHA256_email_hash_1" }, { "email_hash":"SHA256_email_hash_2" }]
+```
+
 #### Remove users from a custom audience
 ```javascript
-Endpoint: http://blueyehub/sdk/customaudiences/removeusers
+Endpoint: https://blueyehub/sdk/customaudiences/removeusers
 ```
 Required Post Parameters:
 <table>
@@ -123,3 +128,8 @@ Required Post Parameters:
 <td>json array</td>
 </tr>
 </table>
+
+Example:
+```javascript
+https://blueyehub/sdk/customaudiences/removeusers?token=c95633d8597a4a14a9078a83b7e7c17e&audience_id=6014146538248&users=[{ "email_hash":"SHA256_email_hash_1" }, { "email_hash":"SHA256_email_hash_2" }]
+```

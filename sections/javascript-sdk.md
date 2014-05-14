@@ -52,63 +52,12 @@ If you used the one line asynchorous method to initialize the SDK, remember to c
 			});
 ```
 
-### Quick Action Tracking
+### App Action Tracking
 
 Easily track any app activity by simply calling the HUB.track method. An optional JSON object of any custom properties associated with the action can be passed as the second parameter to the track method. It is highly advised that a user profile be created prior to using this method so that these actions are auto-tied to individual users.
 
 ```javascript
 			HUB.track('sign up click', { mycustomprop:'test', mycustomprop2:'blue' });
-```
-
-### App Action Tracking
-
-Track any custom item or user event in your app.
-
-<table>
-<tr>
-<th>Field</th>
-<th>Description</th>
-<th>Type</th>
-</tr>
-<tr>
-<td>category</td>
-<td>Category of item (i.e. Wines) or type of event</td>
-<td>String</td>
-</tr>
-<tr>
-<td>action</td>
-<td>Action performed on an item or event (i.e. followed)</td>
-<td>String</td>
-</tr>
-<tr>
-<td>user_id</td>
-<td>Unique user ID in your system. If a user profile was created using the methods describe above, this field is not required. It is also optional if you specify a Facebook ID instead.</td>
-<td>String</td>
-</tr>
-<tr>
-<td>fb_id</td>
-<td>User's Facebook ID if applicable (optional)</td>
-<td>String</td>
-</tr>
-<tr>
-<td>title</td>
-<td>A name or brief description for the item or event (optional) </td>
-<td>String</td>
-</tr>
-<tr>
-<td>img_url</td>
-<td>Image URL for item or event (optional) </td>
-<td>String</td>
-</tr>
-</table>
-
-```javascript
-			HUB.api(‘trackItem’, { fb_id:3107076, category:'contest', action:'entry', 
-						img_url:'http://www.blueye.com/myimg.png', title:'My Entry!' }, 
-				function(response) {
-					//JSON response { success:1 }
-				}
-			);
 ```
 
 ### Facebook Connect 

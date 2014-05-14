@@ -54,7 +54,7 @@ If you used the one line asynchorous method to initialize the SDK, remember to c
 
 ### Quick Action Tracking
 
-For tracking of simple app activity that does not require any of the details afforded by the more expansive tracking call above, simply call the HUB.track method. It is highly advised that a user profile be created prior to using this method so that these actions are auto-tied to individual users.
+Easily track any app activity by simply calling the HUB.track method. An optional JSON object of any custom properties associated with the action can be passed as the second parameter to the track method. It is highly advised that a user profile be created prior to using this method so that these actions are auto-tied to individual users.
 
 ```javascript
 			HUB.track('sign up click', { mycustomprop:'test', mycustomprop2:'blue' });

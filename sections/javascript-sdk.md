@@ -9,7 +9,7 @@ To initialize the SDK asynchronously, include the following line of code just be
 
 ```javascript
 
-<script type="text/javascript">window.hubAsyncInit=function(){HUB.init({apiKey:"YOUR_API_KEY"})};(function(e,t,n){if(!window.HUB){window.HUB={track:function(a,b){window.HUB.q.push([a,b])},q:[]};window.HUB.setUser=window.HUB.track;}var r,i=e.getElementsByTagName(t)[0];if(e.getElementById(n)){return}r=e.createElement(t);r.id=n;r.src="//blueyehub.com/js/api.js";i.parentNode.insertBefore(r,i)})(document,"script","blueyehub-sdk")</script>
+<script type="text/javascript">window.hubAsyncInit=function(){HUB.init({apiKey:"YOUR_API_KEY"})};(function(e,t,n){if(!window.HUB){window.HUB={track:function(a,b,c){window.HUB.q.push([a,b,c])},q:[]};window.HUB.setUser=window.HUB.track;}var r,i=e.getElementsByTagName(t)[0];if(e.getElementById(n)){return}r=e.createElement(t);r.id=n;r.src="//blueyehub.com/js/api.js";i.parentNode.insertBefore(r,i)})(document,"script","blueyehub-sdk")</script>
 
 ```	
 

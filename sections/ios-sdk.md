@@ -41,7 +41,7 @@ The Hub SDK also allows you complete flexiblity in tracking any and all actions 
 
 <img src="http://hub.blueye.com/img/docs/track_dict.png" />
 
-As shown above, additional metdata such as a title / brief description or an image URL can also be set, but are not required. The more information that is specified though, the more engaging the data in your analytics dashboard will be, as shown in the next section.
+The more information that is specified, the more engaging the data in your analytics dashboard will be, as shown in the next section.
 
 ### Analytics Dashboard
 

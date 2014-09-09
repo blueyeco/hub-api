@@ -3,7 +3,7 @@ The iOS Mobile SDK allows you to integrate you custom mobile application into Th
 
 ## Installing the SDK
 
-Download the SDK <a href="https://hub.blueye.com/resources/BlueyeHub.framework.zip" target="_blank">here</a> and extract the files anywhere on your local machine.
+Download the SDK <a href="https://blueyehub.com/resources/BlueyeHub.framework.zip" target="_blank">here</a> and extract the files anywhere on your local machine.
 
 ### Add the Hub SDK to your iOS Project
 

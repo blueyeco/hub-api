@@ -48,3 +48,13 @@ The more information that is specified, the more engaging the data in your analy
 All events tracked during the life of your Mobile app can then be analyzed in our insights dashboard. Additionally, users can be segmented and filtered by action, and custom audiences can be created that plug directly into our media advertising platform.
 
 <img src="http://hub.blueye.com/img/docs/analytics.png" />
+
+<img src="http://hub.blueye.com/img/docs/event_tracker.png" />
+
+<img src="http://hub.blueye.com/img/docs/retarget_aud.png" />
+
+<img src="http://hub.blueye.com/img/docs/explore.png" />
+
+
+
+
